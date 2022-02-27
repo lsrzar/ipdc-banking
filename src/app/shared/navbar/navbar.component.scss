@@ -1,45 +1,88 @@
 @use "../../../assets/scss/utils/" as *;
 
 .header {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: rem(32) rem(135);
-  a {
-    padding: 0;
-    img {
-      height: 100%;
-      max-width: auto;
+  background-color: transparent;
+  padding: rem(32);
+  margin: 0 rem(32);
+  transition: all 0.2s ease-in-out;
+  @include breakpoint(large) {
+    padding: rem(32) rem(135);
+  }
+  .menu {
+    display: inline-block;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    @include breakpoint(large) {
+      display: none;
     }
   }
-  .nav-container {
+  .nav {
     display: flex;
     flex-direction: row;
-    font-family: "Metropolis";
-    font-size: rem(12);
-    font-weight: 600;
-    line-height: rem(20);
-    letter-spacing: rem(2);
-    margin-left: rem(96);
-    li {
-      list-style: none;
-      margin-right: rem(20);
-      a {
-        &:hover {
-          color: var(--pink-primary);
+    justify-content: space-between;
+    width: 100%;
+    margin-right: rem(50);
+    a {
+      padding: 0;
+      .nav__logo {
+        height: 100%;
+        max-width: fit-content;
+        min-width: rem(100);
+      }
+    }
+    .nav__container {
+      @include breakpoint(large) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: rem(96);
+      }
+      display: none;
+      font-family: "Metropolis";
+      font-size: rem(12);
+      font-weight: 600;
+      line-height: rem(20);
+      letter-spacing: rem(2);
+      margin-left: rem(20);
+      li {
+        min-width: fit-content;
+        list-style: none;
+        margin-right: rem(24);
+        a {
+          &:hover {
+            color: var(--pink-primary);
+          }
         }
       }
     }
-  }
-  .search-icon {
-    margin-left: rem(96);
-    margin-right: rem(32);
-    width: rem(24);
-    height: rem(24);
-    img {
-      padding: 0;
+    .search__container {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      margin-right: rem(32);
+      .search {
+        margin-right: rem(24);
+        width: rem(24);
+        height: rem(24);
+        .search__icon {
+          margin: 0 rem(24);
+          padding: 0;
+        }
+      }
+      .i-service,
+      .search {
+        align-self: center;
+      }
+      .i-service {
+        margin-left: rem(24);
+      }
     }
   }
 }
