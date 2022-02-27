@@ -1,0 +1,73 @@
+@use "../utils/" as *;
+
+.btn-primary {
+  padding: 0;
+  margin: 0;
+  height: rem(36);
+  border: none;
+  background-color: var(--pink-primary); //change later to global variable
+  border-radius: rem(4);
+  cursor: pointer;
+  span {
+    color: #ffffff;
+    font-family: "Rubik", sans-serif;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(20);
+    letter-spacing: rem(2);
+    padding: 0 rem(20) 0 rem(20);
+  }
+  &:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    transform: translateZ(10px);
+  }
+}
+
+.btn-secondary {
+  padding: 0;
+  margin: 0;
+  height: rem(36);
+  border: none;
+  background-color: transparent;
+  border: 1px solid var(--pink-primary);
+  border-radius: rem(4);
+  cursor: pointer;
+  span {
+    color: var(--pink-primary);
+    font-family: "Rubik", sans-serif;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(20);
+    letter-spacing: rem(2);
+    padding: 0 rem(20) 0 rem(20);
+  }
+  &:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    transform: translateZ(10px);
+  }
+}
+
+.btn-action {
+  padding: rem(24);
+  border: none;
+  border-radius: rem(55);
+  background-color: #ffffff;
+  box-shadow: 4px 4px 58px rgba(0, 0, 0, 0.12);
+  align-content: center;
+  cursor: pointer;
+  span {
+    color: var(--dark-smoke-grey);
+    font-family: "Metropolis", sans-serif;
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: rem(22);
+    letter-spacing: rem(0);
+  }
+  &:hover {
+    box-shadow: 4px 14px 38px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    transform: translateZ(10px);
+  }
+}
