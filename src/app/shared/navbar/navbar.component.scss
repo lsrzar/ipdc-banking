@@ -25,7 +25,7 @@
       margin-right: rem(24);
       a {
         &:hover {
-          color: grey; //change later to global variable
+          color: var(--pink-primary);
         }
       }
     }
