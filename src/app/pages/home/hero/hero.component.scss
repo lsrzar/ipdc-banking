@@ -1,19 +1,66 @@
 @use "../../../../assets/scss/utils/" as *;
 
 .hero {
-  display: flex;
-  flex-direction: row;
-  .hero-img-wrapper {
-    width: 100%;
-    height: auto;
-    max-width: rem(905);
-    margin-left: auto;
-    .hero-img {
-      &::before {
-        content: "";
-        height: rem(682);
-        background-color: var(--rose-background);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(550);
+    min-width: rem(300);
+    margin: rem(140) 0 0 rem(135);
+    h1,
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+      font-family: "Metropolis", sans-serif;
+      font-weight: 900;
+      font-size: rem(62);
+      line-height: rem(68);
+    }
+    p {
+      max-width: rem(370);
+      font-family: "Metropolis", sans-serif;
+      font-weight: 400;
+      font-size: rem(16);
+      color: var(--smoke-grey);
+      line-height: rem(22);
+      margin-top: rem(22);
+    }
+    .hero__button-group {
+      display: flex;
+      flex-direction: row;
+      .btn-primary,
+      .btn-secondary {
+        margin-top: rem(38);
       }
+      .btn-primary {
+        margin-right: rem(20);
+      }
+    }
+  }
+  .hero__pink-bg {
+    position: absolute;
+    width: 710px;
+    height: 682px;
+    right: 0px;
+    top: -268px;
+    z-index: -2;
+
+    background: #ffeaf5;
+  }
+
+  .hero__img-container {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    z-index: 0;
+    height: auto;
+    max-width: rem(885);
+    .hero__img {
       max-width: rem(905);
     }
   }
