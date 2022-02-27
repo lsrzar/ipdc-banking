@@ -4,12 +4,22 @@
   position: relative;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   .hero__content {
-    display: flex;
-    flex-direction: column;
-    max-width: rem(550);
-    min-width: rem(300);
-    margin: rem(140) 0 0 rem(135);
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+      max-width: rem(550);
+      min-width: rem(300);
+      margin: rem(140) 0 0 rem(135);
+    }
+    max-width: rem(500);
+    min-width: rem(250);
+    margin: rem(140) auto 0 auto;
+    padding: 0 rem(32);
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
     h1,
     p {
       padding: 0;
@@ -18,11 +28,20 @@
     h1 {
       font-family: "Metropolis", sans-serif;
       font-weight: 900;
-      font-size: rem(62);
+      font-size: rem(48);
       line-height: rem(68);
+      text-align: right;
+      transition: all 0.2s ease-in-out;
+      @include breakpoint(large) {
+        font-size: rem(62);
+        text-align: left;
+      }
     }
     p {
-      max-width: rem(370);
+      @include breakpoint(large) {
+        max-width: rem(370);
+      }
+      max-width: rem(330);
       font-family: "Metropolis", sans-serif;
       font-weight: 400;
       font-size: rem(16);
@@ -43,25 +62,43 @@
     }
   }
   .hero__pink-bg {
+    @include breakpoint(large) {
+      position: absolute;
+      width: 50%;
+      height: rem(682);
+      right: 0px;
+      top: -268px;
+    }
     position: absolute;
-    width: 710px;
-    height: 682px;
-    right: 0px;
-    top: -268px;
+    width: 53%;
+    height: 1480px;
+    right: 0;
+    top: -70vh;
     z-index: -2;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
 
     background: #ffeaf5;
   }
 
-  .hero__img-container {
+  .hero__img {
+    @include breakpoint(large) {
+      position: absolute;
+      top: -13vh;
+      left: 41.4vw;
+      z-index: 0;
+      overflow-x: hidden;
+      width: rem(800);
+    }
+    display: flex;
     position: absolute;
-    top: -150px;
-    right: 0;
+    top: 60vh;
+    left: 5.32vw;
     z-index: 0;
     height: auto;
-    max-width: rem(885);
-    .hero__img {
-      max-width: rem(905);
-    }
+    min-width: rem(200);
+    max-width: 100%;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
   }
 }
