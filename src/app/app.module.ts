@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroComponent } from './pages/home/hero/hero.component';
+import { ScrollableContentComponent } from './pages/home/hero/scrollable-content/scrollable-content.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeroComponent],
+  declarations: [AppComponent, HomeComponent, HeroComponent, ScrollableContentComponent],
   imports: [BrowserModule, AppRoutingModule, NavbarModule],
   providers: [],
   bootstrap: [AppComponent],
