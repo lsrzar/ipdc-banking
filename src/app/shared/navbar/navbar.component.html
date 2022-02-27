@@ -1,20 +1,35 @@
-<header class="header container" aria-label="Main navigation" role="navigation">
-  <a href="#"><img src="assets/logo.png" alt="IPDC Argentina" /></a>
-  <nav>
-    <ul class="nav-container">
+<div class="header container" aria-label="Main navigation" role="navigation">
+  <button class="menu" type="button" aria-label="menu">
+    <img src="assets/icons/menu.svg" alt="menu" />
+  </button>
+  <nav class="nav">
+    <a class="nav__logo" href="#"
+      ><img src="assets/logo.png" alt="IPDC Argentina"
+    /></a>
+    <ul class="nav__container">
       <li><a href="#">PERSONAS</a></li>
       <li><a href="#">PyMES</a></li>
       <li><a href="#">EMPRESA</a></li>
-      <li><a href="#">SOBRE NOSOTROS</a></li>
+      <li><a href="#">NOSOTROS</a></li>
       <li><a href="#">COVID 19</a></li>
       <li><a href="#">CAMPAÑAS</a></li>
     </ul>
+    <!-- ?Magnifying glass function not clear -->
+    <div class="search__container">
+      <a href="#" class="search">
+        <img
+          class="search__icon"
+          src="assets/icons/magnifier.svg"
+          alt="Search"
+        />
+      </a>
+      <button
+        class="btn-primary i-service"
+        type="button"
+        aria-label="i-service"
+      >
+        <span>iSERVICE</span>
+      </button>
+    </div>
   </nav>
-  <!-- ?Magnifying glass function not clear -->
-  <a href="#" class="search-icon">
-    <img src="assets/icons/magnifier.svg" alt="Search" />
-  </a>
-  <button class="btn-primary" type="button" aria-label="i-service">
-    <span>iSERVICE</span>
-  </button>
-</header>
+</div>
