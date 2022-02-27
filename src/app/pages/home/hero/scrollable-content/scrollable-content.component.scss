@@ -1,0 +1,28 @@
+@use "../../../../../assets/scss/utils/" as *;
+
+.scrollable-container {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  button {
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: rem(8);
+    }
+    img {
+      width: rem(20);
+    }
+  }
+  .btn-car {
+    position: relative;
+    right: rem(580);
+    top: rem(-120);
+  }
+  .btn-house {
+    position: relative;
+    right: rem(50);
+    top: rem(-80);
+  }
+}
