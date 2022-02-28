@@ -3,4 +3,60 @@
 </header>
 <main>
   <hero></hero>
+  <!-- Experiences -->
+  <section class="experiences">
+    <div class="experiences__header">
+      <h2>Experiencias Extraordinarias para Nuestos Clientes</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, neque
+        minus natus mollitia sapiente dicta repellendus voluptate dolor sit
+        amet.
+      </p>
+    </div>
+    <div class="experiences__grid-container">
+      <div class="experiences__grid">
+        <div class="experiences__cell" *ngFor="let exp of experiencias">
+          <img src="{{ exp.img }}" alt="`${{ exp.title }} logo`" />
+          <div class="experiences__cell-text">
+            <h4>{{ exp.title }}</h4>
+            <p>{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Business Partners -->
+  <section class="partners">
+    <h1>BUSINESS PARTNERS</h1>
+    <div class="partners__items">
+      <img
+        class="partners__logo"
+        src="assets/icons/partners/westin.svg"
+        alt="westin"
+      />
+      <img
+        class="partners__logo"
+        src="assets/icons/partners/summit.svg"
+        alt="summit"
+      />
+      <img
+        class="partners__logo"
+        src="assets/icons/partners/holcim.svg"
+        alt="holcim"
+      />
+      <img
+        class="partners__logo"
+        src="assets/icons/partners/etv.svg"
+        alt="etv"
+      />
+    </div>
+    <nav class="partners__navigation">
+      <ul class="partners__navigation-dots">
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+      </ul>
+    </nav>
+  </section>
 </main>
