@@ -29,11 +29,17 @@ main {
   }
 }
 
+.experiences__grid-container {
+  display: flex;
+  justify-content: center;
+}
 .experiences__grid {
+  max-width: rem(1240);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: rem(24);
   margin: rem(75) rem(135);
+  justify-items: center;
   .experiences__cell {
     width: rem(260);
     img {
@@ -103,6 +109,65 @@ main {
         height: rem(8);
         padding-right: rem(18);
         cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Glance */
+.glance {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  div {
+    display: flex;
+    width: max-content;
+    margin-right: rem(89);
+    img {
+      width: auto;
+      height: 100%;
+    }
+    .glance__text {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin: rem(140) 0 0 rem(110);
+        padding: 0;
+        color: var(--dark-smoke-grey);
+        font-family: "Metropolis", sans-serif;
+        font-size: rem(32);
+        font-weight: 700;
+        line-height: rem(38);
+      }
+      p {
+        color: var(--smoke-grey);
+        font-family: "Metropolis", sans-serif;
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: rem(29);
+        margin: rem(10) 0 rem(44) rem(110);
+        width: rem(460);
+      }
+      button {
+        display: flex;
+        margin-left: rem(110);
+        width: max-content;
+        padding: 0;
+        border: none;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+        span {
+          color: var(--pink-primary);
+          font-family: "Metropolis", sans-serif;
+          font-size: rem(19.33);
+          font-weight: 500;
+          line-height: rem(26.6);
+          align-self: flex-end;
+        }
+        img {
+          margin-left: rem(7.25);
+        }
       }
     }
   }
